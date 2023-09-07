@@ -37,11 +37,11 @@ h5 {
   padding-block: 0.25rem;
 }
 
-.skills tr td:nth-child(2n+1){
+.skills tr td:nth-child(2n + 1) {
   padding-right: 1rem;
 }
 
-.skills tr td:nth-child(2n+2){
+.skills tr td:nth-child(2n + 2) {
   padding-left: 1rem;
 }
 
@@ -63,12 +63,12 @@ h5 {
   margin-left: 0.25rem;
 }
 
-
 .skills ul li:not(:last-child)::after {
-  content: ',';
+  content: ",";
 }
 
-.experience ul li, .experience ul {
+.experience ul li,
+.experience ul {
   list-style: none;
   padding-left: 0;
 }
@@ -77,13 +77,40 @@ h5 {
   padding-left: 1rem;
 }
 
-.education ul, .education ul li {
+.education ul,
+.education ul li {
   list-style: none;
   padding-left: 0;
 }
 
-.education h3, .education h4 {
+.education h3,
+.education h4 {
   font-weight: 300;
   padding: 0;
   margin: 0;
-} 
+}
+
+
+li h3,
+li h4 {
+  font-weight: 300;
+}
+
+li h3 {
+  font-size: 1.5rem;
+}
+
+li h4 {
+  font-size: 1.2rem;
+}
+
+
+li h3 em {
+  font-size: 1rem;
+  text-transform: uppercase;
+}
+
+li h4 em {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
