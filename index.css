@@ -59,6 +59,8 @@ h5 {
   flex-wrap: wrap;
 }
 
+
+
 .skills ul li {
   margin-left: 0.25rem;
 }
@@ -90,6 +92,10 @@ h5 {
   margin: 0;
 }
 
+.experience > ul > li:not(:first-child) {
+  margin-top: 3rem;
+}
+
 
 li h3,
 li h4 {
@@ -113,4 +119,13 @@ li h3 em {
 li h4 em {
   font-size: 0.9rem;
   text-transform: uppercase;
+}
+
+.company{
+  height:3rem;
+  margin-block: 0 1rem;
+}
+
+.company.large{
+  height:1.5rem;
 }
