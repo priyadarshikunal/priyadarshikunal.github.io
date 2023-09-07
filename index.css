@@ -32,3 +32,58 @@ h5 {
   margin: 0;
   margin-block: 0.25em;
 }
+
+.skills td {
+  padding-block: 0.25rem;
+}
+
+.skills tr td:nth-child(2n+1){
+  padding-right: 1rem;
+}
+
+.skills tr td:nth-child(2n+2){
+  padding-left: 1rem;
+}
+
+.skills h3 {
+  padding: 0;
+  margin: 0;
+  font-weight: 300;
+}
+
+.skills ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.skills ul li {
+  margin-left: 0.25rem;
+}
+
+
+.skills ul li:not(:last-child)::after {
+  content: ',';
+}
+
+.experience ul li, .experience ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.experience ul ul {
+  padding-left: 1rem;
+}
+
+.education ul, .education ul li {
+  list-style: none;
+  padding-left: 0;
+}
+
+.education h3, .education h4 {
+  font-weight: 300;
+  padding: 0;
+  margin: 0;
+} 
