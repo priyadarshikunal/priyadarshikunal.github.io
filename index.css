@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  line-height: 1.2em;
 }
 
 body {
@@ -12,4 +13,86 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+  margin-top: 1rem;
+}
+
+h3 {
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+h4 {
+  margin-top: 0.5rem;
+  margin-bottom: 0.25rem;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+header aside {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  gap: 0.25rem;
+}
+
+.profile {
+  margin-bottom: 1rem;
+}
+
+/***** SKILLS *****/
+.skills {
+  margin-bottom: 1rem;
+}
+
+.skills ul {
+  display: flex;
+  list-style: none;
+}
+
+.skills td {
+  padding-block: 0.1rem;
+}
+
+.skills td:nth-child(2) {
+  padding-left: 2rem;
+}
+
+.skills li:not(:last-child):after {
+  content: ", ";
+  margin-right: 0.2rem;
+}
+/***** SKILLS *****/
+
+.experience {
+  margin-bottom: 1rem;
+}
+
+.experience>ul, .experience>ul>li>ul,
+.education>ul {
+  list-style: none;
+}
+
+.experience>ul>li>ul {
+  padding-left: 1rem;
+}
+
+.experience>ul>li>ul>li>ul {
+  padding-left: 1rem;
+  list-style-type: "-  ";
+}
+
+.education {
+  margin-bottom: 1rem;
+}
+
+.education p {
+  padding-left: 1rem;
 }
