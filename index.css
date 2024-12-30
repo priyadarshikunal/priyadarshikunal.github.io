@@ -3,9 +3,8 @@
   margin: 0;
   padding: 0;
   font-family: "Avenir Next", Helvetica, Arial, sans-serif;
-}
-
-:root {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
@@ -73,25 +72,24 @@ section h4 {
   color: dodgerblue;
   font-weight: 600;
   font-size: 1.1rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
 }
 
-section h5 {
-  display: flex;
-  justify-content: space-between;
-
-  span {
-    font-weight: 300;
-    color: #000;
-  }
+section h4 span:not(:first-child) {
+  font-weight: 300;
+  color: #000;
+  font-size: 0.9rem;
+  text-align: right;
 }
 
-.skills ul {
-  display: flex;
-  flex-wrap: wrap;
-  li {
-    background-color: #d2e6ff;
-    border: 1px solid dodgerblue;
-    padding: 0.25rem 0.75rem;
-    font-weight: 600;
+.skills {
+  table {
+    th {
+      text-align: right;
+      padding-right: 1rem;
+      font-weight: 500;
+      color: dodgerblue;
+    }
   }
 }
