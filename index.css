@@ -23,7 +23,7 @@ h6 {
 main {
   display: flex;
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
 }
 
 .contacts {
@@ -36,9 +36,9 @@ main {
 }
 
 section h2 {
-  border-bottom: 2px solid #999;
+  border-bottom: 1px solid #999;
   padding-bottom: 0.25rem;
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.25rem;
 }
 ul.experiences {
   list-style: none;
@@ -48,7 +48,10 @@ ul.experiences {
 
   & > li {
     padding: 0 0 1rem 1rem;
-    border-bottom: 1px solid #999;
+
+    &:not(:last-child) {
+      border-bottom: 1px solid #999;
+    }
   }
 
   p {
@@ -73,6 +76,10 @@ section h4 {
   font-weight: 600;
   font-size: 1.1rem;
   display: grid;
+  grid-template-columns: 1fr 2fr 3fr;
+}
+
+.education h4 {
   grid-template-columns: repeat(3, 1fr);
 }
 
@@ -90,6 +97,10 @@ section h4 span:not(:first-child) {
       padding-right: 1rem;
       font-weight: 500;
       color: dodgerblue;
+    }
+
+    td {
+      padding-left: 1rem;
     }
   }
 }
