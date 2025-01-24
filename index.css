@@ -32,15 +32,20 @@ main {
 table {
   width: 100%;
 
-  th {
-    font-weight: 500;
-    color: dodgerblue;
-  }
-
   td,
   th {
     text-align: left;
     vertical-align: top;
+    padding-block: 0.25rem;
+  }
+
+  th {
+    font-weight: 600;
+    color: dodgerblue;
+  }
+
+  td {
+    padding-inline: 0.5rem;
   }
 }
 
