@@ -49,6 +49,14 @@ table {
   }
 }
 
+.details {
+  width: 17ch;
+}
+
+ul {
+  padding-left: 0.5rem;
+}
+
 .experiences,
 .education {
   table {
