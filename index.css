@@ -2,178 +2,139 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Avenir Next", "Inter", Helvetica, Arial, sans-serif;
+  font-family: sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root {
-  --accent-color: #666;
-}
-
 body {
-  padding: 1rem 2rem;
-  font-size: 16px;
-  line-height: 1.25;
-  font-weight: 300;
+  padding: 1vh 1vw;
+  line-height: 1.2;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: black;
 }
 
 h1,
 h2,
 h3,
 h4,
-h5,
-h6 {
+h5 {
   font-weight: 400;
 }
 
 h2 {
-  text-transform: uppercase;
-  margin-top: 1rem;
+  border-bottom: 1px solid #999;
+  margin-bottom: 0.5rem;
 }
 
-main {
+.intro {
+  h1 {
+    font-size: 2rem;
+    font-weight: 100;
+  }
+  p {
+    font-size: 1.2rem;
+  }
+}
+
+.contact {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-}
+  gap: 10vw;
 
-table {
-  width: 100%;
-  border-collapse: collapse;
-
-  td,
-  th {
-    text-align: left;
-    vertical-align: top;
-    padding-block: 0.25rem;
-  }
-
-  th {
-    font-weight: 600;
-    color: var(--accent-color);
-  }
-
-  td {
-    padding-inline: 0.5rem;
+  a {
+    font-size: 1.1rem;
+    font-family: monospace;
+    text-underline-offset: 0.2rem;
   }
 }
 
-.details {
-  width: 26ch;
-  display: flex;
-  flex-direction: column;
+.skills {
+  & > ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
 
-  span {
-    font-size: 0.85rem;
-  }
+    & h3 {
+      font-size: 1rem;
+      text-transform: uppercase;
+    }
 
-  span:nth-child(1) {
-    font-weight: 500;
-  }
+    & ul {
+      display: flex;
+      gap: 0.35rem;
 
-  span:nth-child(2) {
-    font-style: italic;
-  }
-}
+      li {
+        list-style: none;
+        font-size: 1rem;
+        font-family: monospace;
 
-ul {
-  padding-left: 0.5rem;
-}
-
-.experiences,
-.education {
-  table {
-    tr {
-      border-bottom: 1px solid #ccc;
-
-      td,
-      th {
-        border: none;
+        &:not(:last-child)::after {
+          content: ",";
+        }
       }
     }
   }
 }
 
-.experiences table {
-  margin-left: 16px;
-}
+.experiences,
+.education {
+  ul {
+    list-style: none;
+    padding-left: 1rem;
+  }
 
-.experiences th {
-  width: 9ch;
-  position: relative;
-}
-
-.experiences th::before {
-  content: "";
-  width: 6px;
-  position: absolute;
-  height: calc(100% - 4px);
-  left: -16px;
-}
-
-th::before {
-  background-color: dodgerblue;
-}
-
-th.microsoft::before {
-  background-color: #00a3ee;
-}
-
-th.oracle::before {
-  background-color: #dd1f23;
-}
-
-th.grammarly::before {
-  background-color: #0bb990;
-}
-
-th.amazon::before {
-  background-color: #f3a120;
-}
-
-th.inmobi::before {
-  background-color: #1472f3;
-}
-
-th.accenture::before {
-  background-color: #9b00f6;
-}
-
-.education table td {
-  border-bottom: none;
-}
-
-header {
-  display: flex;
-  justify-content: space-between;
-
-  .intro {
+  & > ul {
+    list-style: none;
     display: flex;
     flex-direction: column;
-    color: var(--accent-color);
+    gap: 1.5rem;
+    padding-left: 0;
 
-    h1 {
-      text-transform: uppercase;
-      font-weight: 500;
+    h3 {
+      border-bottom: 1px dashed #999;
+
+      & span {
+        font-weight: 300;
+
+        &::before {
+          content: "(";
+        }
+
+        &::after {
+          content: ")";
+        }
+      }
     }
 
-    p {
-      font-size: 1.2rem;
+    & > li > ul {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+
+      & ul > li {
+        font-family: serif;
+      }
     }
   }
 
-  .contact {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: space-between;
+  h4 {
+    text-transform: uppercase;
+    margin-block-start: 0.25rem;
 
-    a,
-    span {
-      text-decoration: none;
-      color: var(--accent-color);
-      font-weight: 500;
+    & span {
+      text-transform: capitalize;
+      margin-left: 2rem;
+      font-weight: 300;
+      &::before {
+        content: "(";
+      }
+
+      &::after {
+        content: ")";
+      }
     }
   }
 }
