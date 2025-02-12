@@ -41,12 +41,13 @@ h2 {
 
 .contact {
   display: flex;
-  gap: 10vw;
+  justify-content: space-between;
 
   a {
-    font-size: 1.1rem;
-    font-family: monospace;
-    text-underline-offset: 0.2rem;
+    font-size: 1rem;
+    font-family: sans-serif;
+    text-decoration: none;
+    color: dodgerblue;
   }
 }
 
@@ -58,7 +59,7 @@ h2 {
     gap: 0.6rem;
 
     & h3 {
-      font-size: 1rem;
+      font-size: 1.1rem;
       text-transform: uppercase;
     }
 
@@ -69,7 +70,7 @@ h2 {
       li {
         list-style: none;
         font-size: 1rem;
-        font-family: monospace;
+        font-weight: 100;
 
         &:not(:last-child)::after {
           content: ",";
@@ -95,17 +96,12 @@ h2 {
 
     h3 {
       border-bottom: 1px dashed #999;
+      display: flex;
+      justify-content: space-between;
 
       & span {
         font-weight: 300;
-
-        &::before {
-          content: "(";
-        }
-
-        &::after {
-          content: ")";
-        }
+        font-size: 1rem;
       }
     }
 
@@ -115,12 +111,15 @@ h2 {
       gap: 1rem;
 
       & ul > li {
-        font-family: serif;
+        font-size: 1rem;
+        font-weight: 100;
       }
     }
   }
 
   h4 {
+    display: flex;
+    justify-content: space-between;
     text-transform: uppercase;
     margin-block-start: 0.25rem;
 
@@ -128,13 +127,6 @@ h2 {
       text-transform: capitalize;
       margin-left: 2rem;
       font-weight: 300;
-      &::before {
-        content: "(";
-      }
-
-      &::after {
-        content: ")";
-      }
     }
   }
 }
