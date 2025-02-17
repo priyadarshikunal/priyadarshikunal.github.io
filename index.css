@@ -29,6 +29,11 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+.main-header {
+  display: flex;
+  justify-content: space-between;
+}
+
 .intro {
   h1 {
     font-size: 2rem;
@@ -41,6 +46,7 @@ h2 {
 
 .contact {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
 
   a {
