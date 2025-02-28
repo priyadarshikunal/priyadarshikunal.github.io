@@ -7,13 +7,17 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+:root {
+  color-scheme: light dark;
+}
+
 body {
   padding: 1vh 1vw;
   line-height: 1.2;
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  color: black;
+  color: light-dark(black, white);
 }
 
 h1,
@@ -25,7 +29,7 @@ h5 {
 }
 
 h2 {
-  border-bottom: 1px solid #999;
+  border-bottom: 1px solid light-dark(#999, #888);
   margin-bottom: 0.5rem;
 }
 
@@ -41,6 +45,7 @@ h2 {
   }
   p {
     font-size: 1.2rem;
+    font-family: serif;
   }
 }
 
@@ -58,6 +63,7 @@ h2 {
 }
 
 .skills {
+  margin-top: 1rem;
   & > ul {
     list-style: none;
     display: flex;
@@ -65,29 +71,23 @@ h2 {
     gap: 0.6rem;
 
     & h3 {
+      display: inline-block;
       font-size: 1.1rem;
       text-transform: uppercase;
+      margin-top: 0.25rem;
+      margin-bottom: 0.15rem;
     }
 
-    & ul {
-      display: flex;
-      gap: 0.35rem;
-
-      li {
-        list-style: none;
-        font-size: 1rem;
-        font-weight: 100;
-
-        &:not(:last-child)::after {
-          content: ",";
-        }
-      }
+    p {
+      font-size: 1.1rem;
+      font-weight: 100;
     }
   }
 }
 
 .experiences,
 .education {
+  margin-top: 1rem;
   ul {
     list-style: none;
     padding-left: 1rem;
@@ -117,7 +117,7 @@ h2 {
       gap: 1rem;
 
       & ul > li {
-        font-size: 1rem;
+        font-size: 1.1rem;
         font-weight: 100;
       }
     }
